@@ -1,0 +1,152 @@
+/* ============================================================
+   Velyria TTRPG — Estilos de la Hoja de Personaje (v3)
+   ============================================================ */
+
+body.theme-light {
+  --bg: #f4f1ea;
+  --card-bg-top: #ffffff;
+  --card-bg-bottom: #fdfdfd;
+  --card-border: #d4c4a8;
+  --accent: #8c6a32;
+  --text: #2b2724;
+  --text-muted: #6b6359;
+  background-image: none;
+}
+
+body.theme-light .app-header { padding: 20px; }
+body.theme-light .app-header h1 { color: var(--accent); text-shadow: none; }
+body.theme-light .app-header::after { display: none; }
+
+/* Botones y Navegación */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.btn:hover { opacity: 0.8; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-secondary { background: #e0d6c5; color: #2b2724; }
+.btn-danger { background: #a33a3a; color: #fff; }
+.btn-sm { padding: 4px 8px; font-size: 0.8rem; }
+
+.btn-back { text-decoration: none; color: var(--accent); font-weight: bold; font-size: 0.9rem; }
+.header-top { display: flex; justify-content: space-between; align-items: center; max-width: 960px; margin: 0 auto; }
+
+/* Toolbar */
+.toolbar {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px; background: var(--card-bg-top); padding: 12px;
+  border-radius: 8px; border: 1px solid var(--card-border); flex-wrap: wrap; gap: 10px;
+}
+.char-select {
+  padding: 8px; border-radius: 6px; border: 1px solid var(--card-border);
+  font-family: inherit; font-size: 1rem; background: #fff; min-width: 200px;
+}
+.toolbar-actions { display: flex; gap: 8px; }
+
+/* Estado Vacío */
+.empty-state { text-align: center; padding: 60px 20px; background: var(--card-bg-top); border-radius: 12px; border: 1px solid var(--card-border); }
+.empty-state h2 { color: var(--accent); margin-bottom: 8px; }
+.empty-state p { color: var(--text-muted); margin-bottom: 20px; }
+
+/* Hoja de Personaje */
+.sheet { background: var(--card-bg-top); border: 1px solid var(--card-border); border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.sheet-header { text-align: center; border-bottom: 2px solid var(--card-border); padding-bottom: 16px; margin-bottom: 20px; }
+.sheet-header h2 { font-family: Georgia, serif; font-size: 2rem; color: var(--accent); margin-bottom: 4px; }
+.sheet-header p { color: var(--text-muted); font-weight: 500; }
+
+.sheet-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 640px) {
+  .sheet-grid { grid-template-columns: 1fr 1fr; }
+  .full-width { grid-column: 1 / -1; }
+}
+.panel h3 { font-size: 1.1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 6px; margin-bottom: 12px; color: var(--accent); }
+
+/* Combate y Atributos */
+.combat-stats { display: flex; justify-content: space-around; text-align: center; margin-bottom: 12px; }
+.stat-box { background: #f9f6f0; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); flex: 1; margin: 0 5px; }
+.stat-box span { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+.stat-box strong { font-size: 1.4rem; color: var(--text); }
+
+/* Controles de Vida */
+.hp-controls {
+  display: flex; justify-content: center; gap: 8px; background: #f0e8da;
+  padding: 8px; border-radius: 8px; border: 1px dashed var(--card-border);
+}
+.hp-controls input { padding: 4px 8px; border: 1px solid var(--card-border); border-radius: 4px; font-family: inherit; text-align: center; }
+
+.attributes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.attr-box { text-align: center; border: 1px solid var(--card-border); border-radius: 8px; padding: 8px; background: #f9f6f0; }
+.attr-name { font-size: 0.75rem; font-weight: bold; color: var(--accent); display: block; }
+.attr-score { font-size: 1.2rem; font-weight: bold; display: block; }
+.attr-mod { font-size: 0.85rem; background: var(--card-border); border-radius: 4px; padding: 2px 6px; display: inline-block; }
+
+/* Formulario */
+.sheet-form label { display: flex; flex-direction: column; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 10px; flex: 1; }
+.sheet-form input, .sheet-form select, .sheet-form textarea {
+  padding: 8px; border: 1px solid var(--card-border); border-radius: 6px;
+  font-family: inherit; font-size: 0.95rem; margin-top: 4px; background: #fff; color: var(--text);
+}
+.sheet-form textarea { resize: vertical; min-height: 80px; line-height: 1.4; }
+.form-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.attributes-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+.mod-preview { font-size: 0.8rem; color: var(--accent); margin-top: 2px; font-weight: bold; }
+
+/* Acordeón de Características */
+.feature-item {
+  background: #f9f6f0; border: 1px solid var(--card-border);
+  border-radius: 8px; margin-bottom: 10px; overflow: hidden;
+}
+.feature-item summary {
+  padding: 12px; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  font-weight: 600; user-select: none; list-style: none;
+}
+.feature-item summary::-webkit-details-marker { display: none; }
+.feature-item summary:hover { background: #f0e8da; }
+.feature-item[open] summary { border-bottom: 1px solid var(--card-border); background: #f0e8da; }
+.summary-name { flex: 1; color: var(--text); }
+.feature-details { padding: 12px; background: #fff; }
+
+/* Filas Dinámicas (Inventario) */
+.dynamic-row {
+  display: flex; gap: 8px; margin-bottom: 8px; align-items: center;
+  background: #f9f6f0; padding: 8px; border-radius: 6px; border: 1px solid var(--card-border);
+}
+.dynamic-row input[type="text"] { flex: 2; min-width: 100px; }
+.dynamic-row input[type="number"] { flex: 0 0 60px; }
+.checkbox-label { flex-direction: row !important; align-items: center; gap: 6px; margin: 0 !important; cursor: pointer; white-space: nowrap; }
+
+/* Listas en vista de lectura */
+.features-list, .inventory-list { list-style: none; }
+.features-list li { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+.feature-text { flex: 1; }
+.feature-text strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+
+/* Contenedor de descripción (Sin scroll, se adapta al texto) */
+.feature-desc {
+  font-size: 0.9rem; 
+  color: var(--text-muted); 
+  line-height: 1.4;
+  white-space: pre-wrap; /* Mantiene los saltos de línea */
+  word-wrap: break-word; /* Evita desbordamiento horizontal */
+}
+
+.inventory-list li { padding: 10px 0; border-bottom: 1px dashed var(--card-border); }
+.inv-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.inv-desc { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; white-space: pre-wrap; }
+.badge { background: var(--accent); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; }
+.text-muted { color: var(--text-muted); font-style: italic; font-size: 0.9rem; }
+
+/* ============================================================
+   FORMAS GEOMÉTRICAS
+   ============================================================ */
+.shape { display: inline-block; flex-shrink: 0; margin-top: 2px; }
+.shape-accion { width: 16px; height: 16px; background-color: #2e7d32; border-radius: 50%; }
+.shape-adicional { width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 16px solid #ef6c00; background-color: transparent; }
+.shape-reaccion { width: 12px; height: 12px; background-color: #6a1b9a; transform: rotate(45deg); margin: 4px 2px 0 2px; }
+.shape-pasivo { width: 15px; height: 15px; background-color: #f9a825; border: 1px solid #c47f00; }

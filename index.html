@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#14100d">
+  <title>Velyria TTRPG — Base de Datos</title>
+  <!-- Ruta actualizada -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>Velyria TTRPG</h1>
+    <p class="subtitle">Base de Datos Misteriosa</p>
+  </header>
+
+  <main>
+    <nav class="grid" aria-label="Secciones principales">
+
+      <!-- ATENCIÓN: Se ha eliminado 'data-pending' aquí para que el enlace funcione -->
+      <a class="card" href="personaje.html" data-section="Mi Personaje">
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/person-fill.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Mi Personaje</h2>
+        <p>Hoja de personaje y estadísticas</p>
+      </a>
+
+      <a class="card" href="enemigos.html" data-section="Enemigos" data-pending>
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/shield-slash-fill.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Enemigos</h2>
+        <p>Criaturas y adversarios</p>
+      </a>
+
+      <a class="card" href="jefes.html" data-section="Jefes" data-pending>
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/file-earmark-person.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Jefes</h2>
+        <p>Enemigos legendarios</p>
+      </a>
+
+      <a class="card" href="mundo.html" data-section="Mundo" data-pending>
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/map-fill.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Mundo</h2>
+        <p>Lugares, regiones e historia</p>
+      </a>
+
+      <a class="card" href="objetos.html" data-section="Objetos" data-pending>
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/box-seam-fill.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Objetos</h2>
+        <p>Inventario y tesoros</p>
+      </a>
+
+      <a class="card" href="estados.html" data-section="Estados" data-pending>
+        <span class="card__icon-wrap">
+          <img class="card__icon" src="assets/icons/activity.svg" alt="" width="26" height="26" draggable="false" decoding="async">
+        </span>
+        <h2>Estados</h2>
+        <p>Efectos y condiciones</p>
+      </a>
+
+    </nav>
+  </main>
+
+  <footer class="app-footer">
+    v0.1 · Partida offline
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Ruta actualizada -->
+  <script src="js/main.js"></script>
+</body>
+</html>
